@@ -46,7 +46,10 @@ const Content = () => {
                     expedita ex. Saepe voluptates ipsam dignissimos laudantium! Neque, amet eos tenetur illum voluptas
                     ad culpa, veritatis molestiae perspiciatis explicabo voluptatem! Vitae blanditiis qui quos quidem
                     assumenda.</p>
-                <a href="#" className="learn-more button">Learn More</a>
+                    <div className='learnmore'>
+
+                    <a href="#" className="learn-more button">Learn More</a>
+                    </div>
             </div>
             <div className="imgBox">
                 <a href="#"><img src="/images/img1.png" alt="A coffee" className="starbucks" /></a>

@@ -29,11 +29,15 @@ function App() {
     // Stop confetti after 5 seconds (5000 milliseconds)
     const confettiTimer = setTimeout(() => {
       setStopConfetti(true);
-    }, 10000);
+    }, 5000);
 
     // Clear the timer when the component unmounts or when the effect runs again
     return () => clearTimeout(confettiTimer);
   }, []);
+  const confettiConfig = {
+    gravity: 0.05, // Adjust this value to change the speed, lower value slows down
+    numberOfPieces: 200,
+  };
 
   return (
     <>
@@ -49,7 +53,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-      {!stopConfetti && <Confetti width={width} height={height} />}
+      {!stopConfetti && <Confetti width={width} height={height} {...confettiConfig} className='confetti' />}
       <GVKBucks />
     </>
   );
